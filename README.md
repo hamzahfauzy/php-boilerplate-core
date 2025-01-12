@@ -51,6 +51,12 @@ Core Boilerplate New
 - process -> folder process
 - views -> folder view
 
+## DEFAULT INSTALL
+git clone https://github.com/hamzahfauzy/php-boilerplate-auth-module modules/auth
+git clone https://github.com/hamzahfauzy/php-boilerplate-module-default modules/default
+git clone https://github.com/hamzahfauzy/php-boilerplate-crud-module modules/crud
+git clone https://github.com/andrewsoebagoes/theme-sneat.git themes/sneat
+
 ## Lisensi
 
 Proyek ini dilisensikan di bawah [Z-Techno].
