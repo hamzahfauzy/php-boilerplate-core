@@ -1,11 +1,7 @@
 modules/*
 themes/*
 !modules/.gitkeep
-!modules/crud/*
-!modules/auth/*
-!modules/default/*
 !themes/.gitkeep
-!themes/sneat/*
 vendor
 .env
 public/theme
