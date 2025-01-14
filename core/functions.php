@@ -383,7 +383,7 @@ function __($string)
     return $string;
 }
 
-function tableFields($tbl = false)
+function tableFields($tbl = false, $activeModule = false)
 {
     $tableFields = [];
     $modules = getModules();
@@ -393,10 +393,11 @@ function tableFields($tbl = false)
         $file = Utility::parentPath() . $module . "/config/table-fields.php";
         if(file_exists($file))
         {
+            $module = $activeModule ? $activeModule : str_replace('modules/','',$module);
             $tables = require $file;
             foreach($tables as $table => $fields)
             {
-                $tableFields = array_merge($tableFields, [$table => new TableField($table, $fields, str_replace('modules/','',$module))]);
+                $tableFields = array_merge($tableFields, [$table => new TableField($table, $fields, $module)]);
             }
         }
     }
